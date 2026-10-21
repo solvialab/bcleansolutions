@@ -483,7 +483,16 @@ input[type="checkbox"]:checked::after { transform: rotate(-45deg) translate(1px,
   transition: border-color .2s;
   color-scheme: dark;
 }
+.field { min-width: 0; }
 .field textarea { resize: vertical; min-height: 130px; }
+/* iOS Safari dáva dátumu vlastnú minimálnu šírku a výšku */
+.field input[type="date"] {
+  -webkit-appearance: none; appearance: none;
+  display: block; min-width: 0; max-width: 100%;
+  height: 52px;
+  text-align: left;
+}
+.field input[type="date"]::-webkit-date-and-time-value { text-align: left; margin: 0; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--pink); }
 .field .is-invalid { border-color: #ff7a7a; }
 .honey { position: absolute; left: -9999px; }
