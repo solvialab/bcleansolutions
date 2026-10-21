@@ -10,9 +10,39 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap&subset=latin-ext" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body class="is-loading">
+
+<!-- Ikony: pôdorys zhora (sedačky, postele) a jednoduché linky -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-none" viewBox="0 0 48 32"><rect x="8" y="8" width="32" height="18" rx="3" stroke-dasharray="3 3"/><path d="M14 28 34 6"/></symbol>
+    <symbol id="i-sofa2" viewBox="0 0 48 32"><rect x="7" y="7" width="34" height="19" rx="3"/><path d="M11 26V13h26v13M24 13v13"/></symbol>
+    <symbol id="i-sofa3" viewBox="0 0 48 32"><rect x="2" y="7" width="44" height="19" rx="3"/><path d="M6 26V13h36v13M18 13v13M30 13v13"/></symbol>
+    <symbol id="i-sofaL" viewBox="0 0 48 32"><path d="M4 4h40v26H32V17H4z"/><path d="M4 9h35v21M16 9v8M28 9v8M32 17h7"/></symbol>
+    <symbol id="i-sofaU" viewBox="0 0 48 32"><path d="M3 4h42v26H34V17H14v13H3z"/><path d="M8 30V9h32v21M19 9v8M29 9v8M8 17h6M34 17h6"/></symbol>
+    <symbol id="i-armchair" viewBox="0 0 48 32"><rect x="13" y="6" width="22" height="21" rx="3"/><path d="M17 27V12h14v15"/></symbol>
+    <symbol id="i-pouf" viewBox="0 0 48 32"><rect x="14" y="8" width="20" height="17" rx="5"/><path d="M19 13h10"/></symbol>
+    <symbol id="i-chair" viewBox="0 0 48 32"><path d="M18 3v26M18 17h13v12M18 22h13"/></symbol>
+    <symbol id="i-bed1" viewBox="0 0 48 32"><rect x="14" y="3" width="20" height="27" rx="2"/><rect x="17" y="6" width="14" height="5" rx="1.5"/><path d="M14 14h20"/></symbol>
+    <symbol id="i-bed2" viewBox="0 0 48 32"><rect x="8" y="3" width="32" height="27" rx="2"/><rect x="11" y="6" width="12" height="5" rx="1.5"/><rect x="25" y="6" width="12" height="5" rx="1.5"/><path d="M8 14h32"/></symbol>
+    <symbol id="i-door" viewBox="0 0 48 32"><rect x="15" y="2" width="18" height="28" rx="1"/><rect x="18" y="5" width="12" height="14" rx="1"/><path d="M29 23v2"/></symbol>
+    <symbol id="i-fridge" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M6 9h12M9 5v2M9 12v3"/></symbol>
+    <symbol id="i-oven" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18"/><rect x="7" y="11" width="10" height="6" rx="1"/><path d="M7 5.5h.01M11 5.5h.01"/></symbol>
+    <symbol id="i-balcony" viewBox="0 0 24 24"><path d="M3 11h18M3 21h18M5 11v10M9.5 11v10M14.5 11v10M19 11v10M7 11V4h10v7"/></symbol>
+    <symbol id="i-iron" viewBox="0 0 24 24"><path d="M3 18h17v-3a6 6 0 0 0-6-6H8M3 18l2-5a6 6 0 0 1 3-4M9 6h7"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9 15a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></symbol>
+    <symbol id="i-bin" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14M10 11v6M14 11v6"/></symbol>
+    <symbol id="i-frame" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="15" rx="1"/><rect x="7" y="6" width="10" height="9"/><path d="M2 21h20"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-broom" viewBox="0 0 24 24"><path d="M14 3l-3 9M7 12h9l2 9H5z"/><path d="M9 16v5M13 16v5"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2c.7 5.5 3 8 9 9-6 1-8.3 3.5-9 11-.7-7.5-3-10-9-11 6-1 8.3-3.5 9-9z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-once" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></symbol>
+  </defs>
+</svg>
 
 <!-- Loader: zahmlené sklo, stierka ho trikrát pretiahne a odhalí logo -->
 <div class="loader" aria-hidden="true">
@@ -142,15 +172,15 @@
             </div>
             <fieldset class="choice">
               <legend>Typ upratovania</legend>
-              <label><input type="radio" name="home-type" value="basic" checked><span>Bežné <em>1,20 €/m²</em></span></label>
-              <label><input type="radio" name="home-type" value="deep"><span>Generálne <em>2,40 €/m²</em></span></label>
+              <label><input type="radio" name="home-type" value="basic" checked><span><svg class="ico" aria-hidden="true"><use href="#i-broom"/></svg>Bežné <em>1,20 €/m²</em></span></label>
+              <label><input type="radio" name="home-type" value="deep"><span><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg>Generálne <em>2,40 €/m²</em></span></label>
             </fieldset>
             <fieldset class="extras">
               <legend>Navyše</legend>
-              <label><input type="checkbox" data-extra="Chladnička zvnútra" data-price="15"><span>Chladnička zvnútra</span><em>+15 €</em></label>
-              <label><input type="checkbox" data-extra="Rúra a digestor" data-price="20"><span>Rúra a digestor</span><em>+20 €</em></label>
-              <label><input type="checkbox" data-extra="Balkón alebo terasa" data-price="15"><span>Balkón alebo terasa</span><em>+15 €</em></label>
-              <label><input type="checkbox" data-extra="Žehlenie (1 hodina)" data-price="15"><span>Žehlenie, 1 hodina</span><em>+15 €</em></label>
+              <label><input type="checkbox" data-extra="Chladnička zvnútra" data-price="15"><svg class="ico" aria-hidden="true"><use href="#i-fridge"/></svg><span>Chladnička zvnútra</span><em>+15 €</em></label>
+              <label><input type="checkbox" data-extra="Rúra a digestor" data-price="20"><svg class="ico" aria-hidden="true"><use href="#i-oven"/></svg><span>Rúra a digestor</span><em>+20 €</em></label>
+              <label><input type="checkbox" data-extra="Balkón alebo terasa" data-price="15"><svg class="ico" aria-hidden="true"><use href="#i-balcony"/></svg><span>Balkón alebo terasa</span><em>+15 €</em></label>
+              <label><input type="checkbox" data-extra="Žehlenie (1 hodina)" data-price="15"><svg class="ico" aria-hidden="true"><use href="#i-iron"/></svg><span>Žehlenie, 1 hodina</span><em>+15 €</em></label>
             </fieldset>
           </div>
 
@@ -164,9 +194,9 @@
             </div>
             <fieldset class="extras">
               <legend>Navyše</legend>
-              <label><input type="checkbox" data-extra-m2="Škvrny od farby a malty" data-price="0.5"><span>Odstránenie škvŕn od farby a malty</span><em>+0,50 €/m²</em></label>
-              <label><input type="checkbox" data-extra-m2="Umytie okien" data-price="0.6"><span>Umytie všetkých okien</span><em>+0,60 €/m²</em></label>
-              <label><input type="checkbox" data-extra="Odvoz drobného odpadu" data-price="25"><span>Odvoz drobného odpadu</span><em>+25 €</em></label>
+              <label><input type="checkbox" data-extra-m2="Škvrny od farby a malty" data-price="0.5"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg><span>Odstránenie škvŕn od farby a malty</span><em>+0,50 €/m²</em></label>
+              <label><input type="checkbox" data-extra-m2="Umytie okien" data-price="0.6"><svg class="ico" aria-hidden="true"><use href="#i-window"/></svg><span>Umytie všetkých okien</span><em>+0,60 €/m²</em></label>
+              <label><input type="checkbox" data-extra="Odvoz drobného odpadu" data-price="25"><svg class="ico" aria-hidden="true"><use href="#i-bin"/></svg><span>Odvoz drobného odpadu</span><em>+25 €</em></label>
             </fieldset>
           </div>
 
@@ -174,22 +204,22 @@
           <div class="panel" data-panel="sofa" role="tabpanel" hidden>
             <fieldset class="choice choice-sofa">
               <legend>Sedačka</legend>
-              <label><input type="radio" name="sofa-type" value="0" data-name="" ><span>Bez sedačky</span></label>
-              <label><input type="radio" name="sofa-type" value="45" data-name="Sedačka 2-miestna"><span>2-miestna <em>45 €</em></span></label>
-              <label><input type="radio" name="sofa-type" value="55" data-name="Sedačka 3-miestna" checked><span>3-miestna <em>55 €</em></span></label>
-              <label><input type="radio" name="sofa-type" value="75" data-name="Rohová sedačka L"><span>Rohová L <em>75 €</em></span></label>
-              <label><input type="radio" name="sofa-type" value="95" data-name="Sedačka U"><span>Sedačka U <em>95 €</em></span></label>
+              <label><input type="radio" name="sofa-type" value="0" data-name="" ><span><svg class="ico-lg" aria-hidden="true"><use href="#i-none"/></svg><b>Bez sedačky</b><em>–</em></span></label>
+              <label><input type="radio" name="sofa-type" value="45" data-name="Sedačka 2-miestna"><span><svg class="ico-lg" aria-hidden="true"><use href="#i-sofa2"/></svg><b>2-miestna</b><em>45 €</em></span></label>
+              <label><input type="radio" name="sofa-type" value="55" data-name="Sedačka 3-miestna" checked><span><svg class="ico-lg" aria-hidden="true"><use href="#i-sofa3"/></svg><b>3-miestna</b><em>55 €</em></span></label>
+              <label><input type="radio" name="sofa-type" value="75" data-name="Rohová sedačka L"><span><svg class="ico-lg" aria-hidden="true"><use href="#i-sofaL"/></svg><b>Rohová L</b><em>75 €</em></span></label>
+              <label><input type="radio" name="sofa-type" value="95" data-name="Sedačka U"><span><svg class="ico-lg" aria-hidden="true"><use href="#i-sofaU"/></svg><b>Sedačka U</b><em>95 €</em></span></label>
             </fieldset>
             <div class="steppers">
-              <div class="stepper" data-name="Kreslo" data-price="20"><span>Kreslo <em>20 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
-              <div class="stepper" data-name="Taburetka" data-price="10"><span>Taburetka <em>10 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
-              <div class="stepper" data-name="Čalúnená stolička" data-price="8"><span>Čalúnená stolička <em>8 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
-              <div class="stepper" data-name="Matrac jednolôžko" data-price="30"><span>Matrac, jednolôžko <em>30 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
-              <div class="stepper" data-name="Matrac dvojlôžko" data-price="45"><span>Matrac, dvojlôžko <em>45 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Kreslo" data-price="20"><span><svg class="ico-md" aria-hidden="true"><use href="#i-armchair"/></svg>Kreslo <em>20 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Taburetka" data-price="10"><span><svg class="ico-md" aria-hidden="true"><use href="#i-pouf"/></svg>Taburetka <em>10 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Čalúnená stolička" data-price="8"><span><svg class="ico-md" aria-hidden="true"><use href="#i-chair"/></svg>Čalúnená stolička <em>8 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Matrac jednolôžko" data-price="30"><span><svg class="ico-md" aria-hidden="true"><use href="#i-bed1"/></svg>Matrac, jednolôžko <em>30 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Matrac dvojlôžko" data-price="45"><span><svg class="ico-md" aria-hidden="true"><use href="#i-bed2"/></svg>Matrac, dvojlôžko <em>45 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
             </div>
             <fieldset class="extras">
               <legend>Navyše</legend>
-              <label><input type="checkbox" data-extra="Impregnácia proti škvrnám" data-price="25"><span>Impregnácia proti škvrnám</span><em>+25 €</em></label>
+              <label><input type="checkbox" data-extra="Impregnácia proti škvrnám" data-price="25"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><span>Impregnácia proti škvrnám</span><em>+25 €</em></label>
             </fieldset>
           </div>
 
@@ -203,11 +233,11 @@
             </div>
             <p class="hint">Dvojkrídlové okno počítame ako jedno okno.</p>
             <div class="steppers">
-              <div class="stepper" data-name="Balkónové dvere" data-price="9"><span>Balkónové dvere <em>9 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Balkónové dvere" data-price="9"><span><svg class="ico-md" aria-hidden="true"><use href="#i-door"/></svg>Balkónové dvere <em>9 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
             </div>
             <fieldset class="extras">
               <legend>Navyše</legend>
-              <label><input type="checkbox" data-extra-per="Rámy a parapety" data-price="2"><span>Rámy a parapety</span><em>+2 €/okno</em></label>
+              <label><input type="checkbox" data-extra-per="Rámy a parapety" data-price="2"><svg class="ico" aria-hidden="true"><use href="#i-frame"/></svg><span>Rámy a parapety</span><em>+2 €/okno</em></label>
             </fieldset>
           </div>
 
@@ -221,8 +251,8 @@
             </div>
             <fieldset class="choice">
               <legend>Ako často</legend>
-              <label><input type="radio" name="office-freq" value="once" checked><span>Jednorazovo</span></label>
-              <label><input type="radio" name="office-freq" value="weekly"><span>Pravidelne <em>−10 %</em></span></label>
+              <label><input type="radio" name="office-freq" value="once" checked><span><svg class="ico" aria-hidden="true"><use href="#i-once"/></svg>Jednorazovo</span></label>
+              <label><input type="radio" name="office-freq" value="weekly"><span><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>Pravidelne <em>−10 %</em></span></label>
             </fieldset>
           </div>
         </div>
@@ -357,6 +387,6 @@
   </div>
 </footer>
 
-<script src="main.js?v=2"></script>
+<script src="main.js?v=3"></script>
 </body>
 </html>

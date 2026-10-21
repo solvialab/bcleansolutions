@@ -282,7 +282,7 @@ legend { padding: 0; margin-bottom: 14px; color: var(--mauve); font-size: 15px; 
 .choice label { position: relative; cursor: pointer; }
 .choice input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
 .choice span {
-  display: inline-flex; gap: 10px; align-items: baseline;
+  display: inline-flex; gap: 10px; align-items: center;
   padding: 12px 18px;
   border: 1px solid var(--line); border-radius: 999px;
   font-weight: 500; font-size: 15px;
@@ -293,9 +293,36 @@ legend { padding: 0; margin-bottom: 14px; color: var(--mauve); font-size: 15px; 
 .choice input:checked + span em { color: var(--blush); }
 .choice input:focus-visible + span { outline: 2px solid var(--pink); outline-offset: 3px; }
 
+/* Ikony */
+.ico, .ico-md, .ico-lg {
+  flex: none;
+  fill: none; stroke: currentColor;
+  stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+}
+.ico { width: 20px; height: 20px; color: var(--mauve); }
+.ico-md { width: 42px; height: 28px; color: var(--blush); stroke-width: 1.4; }
+.ico-lg { width: 64px; height: 43px; stroke-width: 1.3; }
+.choice span .ico { align-self: center; width: 18px; height: 18px; margin-right: -2px; }
+.choice input:checked + span .ico { color: var(--pink); }
+
+/* Sedačky ako dlaždice s pôdorysom */
+.choice-sofa { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.choice-sofa span {
+  display: grid; justify-items: center; gap: 6px;
+  height: 100%;
+  padding: 18px 8px 14px;
+  border-radius: 16px;
+  text-align: center;
+}
+.choice-sofa .ico-lg { color: var(--mauve); margin-bottom: 6px; transition: color .2s; }
+.choice-sofa b { font-weight: 600; font-size: 15px; line-height: 1.2; }
+.choice-sofa label:hover span { border-color: var(--mauve); }
+.choice-sofa input:checked + span { border-color: var(--pink); }
+.choice-sofa input:checked + span .ico-lg { color: var(--pink); }
+
 .extras { display: grid; gap: 0; }
 .extras label {
-  display: grid; grid-template-columns: 22px 1fr auto; gap: 14px; align-items: center;
+  display: grid; grid-template-columns: 22px 20px 1fr auto; gap: 14px; align-items: center;
   padding: 14px 0; border-top: 1px solid var(--line); cursor: pointer;
 }
 .extras label:last-child { border-bottom: 1px solid var(--line); }
@@ -323,6 +350,7 @@ input[type="checkbox"]:checked::after { transform: rotate(-45deg) translate(1px,
   padding: 12px 0; border-top: 1px solid var(--line);
 }
 .stepper:last-child { border-bottom: 1px solid var(--line); }
+.stepper > span { display: flex; align-items: center; gap: 12px; }
 .stepper em { font-style: normal; color: var(--mauve); font-size: 15px; margin-left: 8px; }
 .stepper > div { display: flex; align-items: center; gap: 4px; }
 .stepper button {
@@ -457,6 +485,11 @@ input[type="checkbox"]:checked::after { transform: rotate(-45deg) translate(1px,
   .receipt { padding: 26px 22px 24px; }
   .receipt-total strong { font-size: 44px; }
   .tabs { border-radius: 16px; }
+  .choice-sofa { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stepper > span { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; line-height: 1.3; }
+  .stepper > span .ico-md { grid-row: span 2; }
+  .stepper em { margin-left: 0; font-size: 14px; }
+  .ico-lg { width: 54px; height: 36px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
