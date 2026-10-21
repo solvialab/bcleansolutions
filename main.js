@@ -399,6 +399,17 @@
   const form = document.getElementById('form');
   const status = form.querySelector('.form-status');
 
+  // Termín: od zajtra najviac rok dopredu
+  const isoDate = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const minDay = new Date(); minDay.setDate(minDay.getDate() + 1);
+  const maxDay = new Date(); maxDay.setFullYear(maxDay.getFullYear() + 1);
+  form.termin.min = isoDate(minDay);
+  form.termin.max = isoDate(maxDay);
+  const dateOk = v => !v || (/^\d{4}-\d{2}-\d{2}$/.test(v) && v >= form.termin.min && v <= form.termin.max);
+  // Telefón je nepovinný; ak je vyplnený, 9 až 15 číslic, voliteľne s + na začiatku
+  const phoneOk = v => !v.trim() || /^\+?[\d\s\/-]{9,20}$/.test(v.trim()) && v.replace(/\D/g, '').length >= 9 && v.replace(/\D/g, '').length <= 15;
+  form.termin.addEventListener('change', () => form.termin.classList.toggle('is-invalid', !dateOk(form.termin.value)));
+
   receipt.send.addEventListener('click', () => {
     if (!lastQuote) return;
     const items = lastQuote.lines.map(([l, v]) => `- ${l}: ${eur(v, Number.isInteger(Math.round(v * 100) / 100) ? 0 : 2)}`).join('\n');
@@ -418,13 +429,20 @@
     };
     check(form.meno, form.meno.value.trim().length > 1);
     check(form.email, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value.trim()));
+    const basicBad = firstBad;
+    check(form.telefon, phoneOk(form.telefon.value));
+    check(form.termin, dateOk(form.termin.value) && !form.termin.validity.badInput);
     check(form.sprava, form.sprava.value.trim().length > 3);
     const consent = form.suhlas;
     consent.closest('.consent').classList.toggle('is-invalid', !consent.checked);
     if (!consent.checked && !firstBad) firstBad = consent;
 
     if (firstBad) {
-      status.textContent = 'Doplňte meno, platný e-mail, správu a súhlas so spracovaním údajov.';
+      const fmtDay = d => d.toLocaleDateString('sk-SK');
+      status.textContent =
+        !basicBad && firstBad === form.telefon ? 'Telefónne číslo zadajte v tvare +421 9xx xxx xxx alebo 09xx xxx xxx.' :
+        !basicBad && firstBad === form.termin ? `Termín vyberte v rozmedzí ${fmtDay(minDay)} až ${fmtDay(maxDay)}.` :
+        'Doplňte meno, platný e-mail, správu a súhlas so spracovaním údajov.';
       status.classList.add('is-err');
       firstBad.focus();
       return;
