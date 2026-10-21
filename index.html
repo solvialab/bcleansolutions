@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bclean Solutions – upratovanie Bratislava</title>
+<meta name="description" content="Upratovanie domácností, kancelárií a bytov po maľovaní, tepovanie sedačiek a umývanie okien v Bratislave. Cenu poznáte vopred.">
+<meta name="theme-color" content="#1B1120">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap&subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+<!-- Loader: zahmlené sklo, stierka ho trikrát pretiahne a odhalí logo -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-pane">
+    <img class="loader-logo" src="assets/logo.png" alt="">
+    <canvas class="loader-fog"></canvas>
+    <div class="squeegee"><span></span></div>
+    <svg class="loader-spark" viewBox="0 0 40 40"><path d="M20 0 C21.5 13 27 18.5 40 20 C27 21.5 21.5 27 20 40 C18.5 27 13 21.5 0 20 C13 18.5 18.5 13 20 0Z"/></svg>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Bclean Solutions – na začiatok">
+      <img src="assets/logo-transparent.png" alt="bclean.solutions.sk">
+    </a>
+    <nav class="nav" aria-label="Hlavná navigácia">
+      <a href="#sluzby">Služby</a>
+      <a href="#cennik">Cenník</a>
+      <a href="#postup">Ako to prebieha</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="#cennik" class="btn btn-small">Vypočítať cenu</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          <span class="line"><span>Prídeme,</span></span>
+          <span class="line"><span>upraceme,</span></span>
+          <span class="line"><span>odídeme.</span></span>
+        </h1>
+        <p class="hero-lede">Zostane len pohoda. Upratujeme domácnosti, kancelárie a byty po maľovaní v&nbsp;Bratislave a&nbsp;okolí, tepujeme sedačky a umývame okná. Cenu poznáte ešte predtým, ako prídeme.</p>
+        <div class="hero-actions">
+          <a href="#cennik" class="btn">Vypočítať cenu</a>
+          <a href="#kontakt" class="btn btn-ghost">Napísať nám</a>
+        </div>
+        <ul class="hero-facts">
+          <li>Vlastná chémia aj technika</li>
+          <li>Pevná cena vopred</li>
+          <li>Faktúra na firmu aj osobu</li>
+        </ul>
+      </div>
+
+      <figure class="glass">
+        <div class="glass-frame">
+          <div class="glass-under">
+            <span>pohoda.</span>
+          </div>
+          <canvas class="glass-fog" aria-hidden="true"></canvas>
+        </div>
+        <figcaption>Prejdite po skle. Takto vyzerá naša práca.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="sluzby">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Čo pre vás urobíme</h2>
+        <p>Každá zákazka má rovnaký štandard: pracujeme vo vlastných prostriedkoch, s vlastnou technikou a po sebe nenechávame nič, čo by ste museli dorábať.</p>
+      </div>
+
+      <ul class="services">
+        <li>
+          <h3>Bežné upratovanie</h3>
+          <p>Prach, podlahy, kuchyňa, kúpeľňa, WC. Pre byty a domy, jednorazovo aj pravidelne.</p>
+          <span class="price"><small>od</small> 1,20 €/m²</span>
+        </li>
+        <li>
+          <h3>Generálne upratovanie</h3>
+          <p>Do hĺbky: skrinky zvnútra, spáry, vodný kameň, radiátory, svietidlá, dvere.</p>
+          <span class="price"><small>od</small> 2,40 €/m²</span>
+        </li>
+        <li>
+          <h3>Po maľovaní a rekonštrukcii</h3>
+          <p>Stavebný prach, škvrny od farby a malty, okná, podlahy. Byt odovzdáme pripravený na bývanie.</p>
+          <span class="price"><small>od</small> 3,00 €/m²</span>
+        </li>
+        <li>
+          <h3>Tepovanie sedačiek</h3>
+          <p>Klasické, rohové L aj U sedačky, kreslá, matrace. Profesionálne tepovanie s dosušením.</p>
+          <span class="price"><small>od</small> 45 €</span>
+        </li>
+        <li>
+          <h3>Umývanie okien</h3>
+          <p>Sklá z oboch strán, rámy a parapety. Bez šmúh, aj na balkónových dverách.</p>
+          <span class="price"><small>od</small> 7 €/okno</span>
+        </li>
+        <li>
+          <h3>Kancelárie a prevádzky</h3>
+          <p>Jednorazovo alebo podľa dohodnutého rozpisu, mimo vašich pracovných hodín.</p>
+          <span class="price"><small>od</small> 1,00 €/m²</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-pricing" id="cennik">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Cenník a kalkulačka</h2>
+        <p>Vyberte službu, nastavte rozlohu alebo počet kusov a hneď uvidíte orientačnú cenu. Konečnú cenu potvrdíme po krátkom rozhovore alebo podľa fotiek.</p>
+      </div>
+
+      <div class="calc">
+        <div class="calc-controls">
+          <div class="tabs" role="tablist" aria-label="Služba">
+            <button role="tab" aria-selected="true" data-tab="home">Domácnosť</button>
+            <button role="tab" aria-selected="false" data-tab="paint">Po maľovaní</button>
+            <button role="tab" aria-selected="false" data-tab="sofa">Sedačky</button>
+            <button role="tab" aria-selected="false" data-tab="windows">Okná</button>
+            <button role="tab" aria-selected="false" data-tab="office">Kancelária</button>
+          </div>
+
+          <!-- Domácnosť -->
+          <div class="panel" data-panel="home" role="tabpanel">
+            <div class="range-field">
+              <label for="home-m2">Rozloha bytu alebo domu</label>
+              <output class="range-value" for="home-m2"><b data-out="home-m2">70</b> m²</output>
+              <input type="range" id="home-m2" min="20" max="250" step="5" value="70">
+              <div class="range-scale"><span>20 m²</span><span>250 m²</span></div>
+            </div>
+            <fieldset class="choice">
+              <legend>Typ upratovania</legend>
+              <label><input type="radio" name="home-type" value="basic" checked><span>Bežné <em>1,20 €/m²</em></span></label>
+              <label><input type="radio" name="home-type" value="deep"><span>Generálne <em>2,40 €/m²</em></span></label>
+            </fieldset>
+            <fieldset class="extras">
+              <legend>Navyše</legend>
+              <label><input type="checkbox" data-extra="Chladnička zvnútra" data-price="15"><span>Chladnička zvnútra</span><em>+15 €</em></label>
+              <label><input type="checkbox" data-extra="Rúra a digestor" data-price="20"><span>Rúra a digestor</span><em>+20 €</em></label>
+              <label><input type="checkbox" data-extra="Balkón alebo terasa" data-price="15"><span>Balkón alebo terasa</span><em>+15 €</em></label>
+              <label><input type="checkbox" data-extra="Žehlenie (1 hodina)" data-price="15"><span>Žehlenie, 1 hodina</span><em>+15 €</em></label>
+            </fieldset>
+          </div>
+
+          <!-- Po maľovaní -->
+          <div class="panel" data-panel="paint" role="tabpanel" hidden>
+            <div class="range-field">
+              <label for="paint-m2">Rozloha po maľovaní alebo rekonštrukcii</label>
+              <output class="range-value" for="paint-m2"><b data-out="paint-m2">60</b> m²</output>
+              <input type="range" id="paint-m2" min="20" max="250" step="5" value="60">
+              <div class="range-scale"><span>20 m²</span><span>250 m²</span></div>
+            </div>
+            <fieldset class="extras">
+              <legend>Navyše</legend>
+              <label><input type="checkbox" data-extra-m2="Škvrny od farby a malty" data-price="0.5"><span>Odstránenie škvŕn od farby a malty</span><em>+0,50 €/m²</em></label>
+              <label><input type="checkbox" data-extra-m2="Umytie okien" data-price="0.6"><span>Umytie všetkých okien</span><em>+0,60 €/m²</em></label>
+              <label><input type="checkbox" data-extra="Odvoz drobného odpadu" data-price="25"><span>Odvoz drobného odpadu</span><em>+25 €</em></label>
+            </fieldset>
+          </div>
+
+          <!-- Sedačky -->
+          <div class="panel" data-panel="sofa" role="tabpanel" hidden>
+            <fieldset class="choice choice-sofa">
+              <legend>Sedačka</legend>
+              <label><input type="radio" name="sofa-type" value="0" data-name="" ><span>Bez sedačky</span></label>
+              <label><input type="radio" name="sofa-type" value="45" data-name="Sedačka 2-miestna"><span>2-miestna <em>45 €</em></span></label>
+              <label><input type="radio" name="sofa-type" value="55" data-name="Sedačka 3-miestna" checked><span>3-miestna <em>55 €</em></span></label>
+              <label><input type="radio" name="sofa-type" value="75" data-name="Rohová sedačka L"><span>Rohová L <em>75 €</em></span></label>
+              <label><input type="radio" name="sofa-type" value="95" data-name="Sedačka U"><span>Sedačka U <em>95 €</em></span></label>
+            </fieldset>
+            <div class="steppers">
+              <div class="stepper" data-name="Kreslo" data-price="20"><span>Kreslo <em>20 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Taburetka" data-price="10"><span>Taburetka <em>10 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Čalúnená stolička" data-price="8"><span>Čalúnená stolička <em>8 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Matrac jednolôžko" data-price="30"><span>Matrac, jednolôžko <em>30 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+              <div class="stepper" data-name="Matrac dvojlôžko" data-price="45"><span>Matrac, dvojlôžko <em>45 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+            </div>
+            <fieldset class="extras">
+              <legend>Navyše</legend>
+              <label><input type="checkbox" data-extra="Impregnácia proti škvrnám" data-price="25"><span>Impregnácia proti škvrnám</span><em>+25 €</em></label>
+            </fieldset>
+          </div>
+
+          <!-- Okná -->
+          <div class="panel" data-panel="windows" role="tabpanel" hidden>
+            <div class="range-field">
+              <label for="win-count">Počet okien</label>
+              <output class="range-value" for="win-count"><b data-out="win-count">8</b> <span data-unit="win-count">okien</span></output>
+              <input type="range" id="win-count" min="1" max="40" step="1" value="8">
+              <div class="range-scale"><span>1</span><span>40</span></div>
+            </div>
+            <p class="hint">Dvojkrídlové okno počítame ako jedno okno.</p>
+            <div class="steppers">
+              <div class="stepper" data-name="Balkónové dvere" data-price="9"><span>Balkónové dvere <em>9 €</em></span><div><button type="button" aria-label="Menej">−</button><output>0</output><button type="button" aria-label="Viac">+</button></div></div>
+            </div>
+            <fieldset class="extras">
+              <legend>Navyše</legend>
+              <label><input type="checkbox" data-extra-per="Rámy a parapety" data-price="2"><span>Rámy a parapety</span><em>+2 €/okno</em></label>
+            </fieldset>
+          </div>
+
+          <!-- Kancelária -->
+          <div class="panel" data-panel="office" role="tabpanel" hidden>
+            <div class="range-field">
+              <label for="office-m2">Rozloha priestorov</label>
+              <output class="range-value" for="office-m2"><b data-out="office-m2">120</b> m²</output>
+              <input type="range" id="office-m2" min="30" max="800" step="10" value="120">
+              <div class="range-scale"><span>30 m²</span><span>800 m²</span></div>
+            </div>
+            <fieldset class="choice">
+              <legend>Ako často</legend>
+              <label><input type="radio" name="office-freq" value="once" checked><span>Jednorazovo</span></label>
+              <label><input type="radio" name="office-freq" value="weekly"><span>Pravidelne <em>−10 %</em></span></label>
+            </fieldset>
+          </div>
+        </div>
+
+        <aside class="receipt" aria-live="polite">
+          <h3 class="receipt-title" data-r="title">Upratovanie domácnosti</h3>
+          <ul class="receipt-lines" data-r="lines"></ul>
+          <div class="receipt-total">
+            <span>Orientačná cena</span>
+            <strong data-r="total">84 €</strong>
+          </div>
+          <p class="receipt-note" data-r="note">Doprava v rámci Bratislavy je v cene. Minimálna objednávka je 50 €.</p>
+          <button type="button" class="btn btn-block" data-r="send">Poslať dopyt s touto cenou</button>
+        </aside>
+      </div>
+
+      <p class="price-disclaimer">Uvedené ceny sú orientačné, vrátane prostriedkov a techniky. Pri veľmi znečistených priestoroch alebo atypických zákazkách sa cena môže líšiť; vždy ju odsúhlasíte vopred.</p>
+    </div>
+  </section>
+
+  <section class="section" id="postup">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Ako to prebieha</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Pošlete dopyt</h3>
+          <p>Cez kalkulačku alebo formulár. Stačí rozloha, služba a termín, ktorý vám vyhovuje.</p>
+        </li>
+        <li>
+          <h3>Potvrdíme cenu a termín</h3>
+          <p>Do 24 hodín sa ozveme. Ak treba, poprosíme o pár fotiek, aby cena sedela na euro.</p>
+        </li>
+        <li>
+          <h3>Upraceme</h3>
+          <p>Prídeme načas, s vlastnou chémiou a technikou. Vy môžete byť doma, alebo nám nechať kľúče.</p>
+        </li>
+        <li>
+          <h3>Skontrolujete</h3>
+          <p>Prejdeme to spolu. Ak vám niečo nesedí, opravíme to hneď, kým odídeme.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <h2>Napíšte nám</h2>
+        <p>Odpovedáme do 24 hodín, väčšinou oveľa skôr. Ak chcete presnejšiu cenu, pridajte do správy rozlohu a čo všetko treba upratať.</p>
+
+        <dl class="company">
+          <div>
+            <dt>E-mail</dt>
+            <dd><a href="mailto:bclean.solutions.sk@gmail.com">bclean.solutions.sk@gmail.com</a></dd>
+          </div>
+          <div>
+            <dt>Sídlo</dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=Bielorusk%C3%A1+5191%2F28%2C+821+06+Bratislava" target="_blank" rel="noopener">Bieloruská 5191/28<br>821 06 Bratislava-Podunajské Biskupice</a></dd>
+          </div>
+          <div>
+            <dt>Firma</dt>
+            <dd>Bclean Solutions<br>IČO: 57 946 337</dd>
+          </div>
+        </dl>
+      </div>
+
+      <form class="form" id="form" novalidate>
+        <div class="field">
+          <label for="f-name">Meno a priezvisko</label>
+          <input id="f-name" name="meno" autocomplete="name" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-email">E-mail</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Telefón</label>
+            <input id="f-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+421">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-service">Služba</label>
+            <select id="f-service" name="sluzba">
+              <option>Upratovanie domácnosti</option>
+              <option>Generálne upratovanie</option>
+              <option>Upratovanie po maľovaní</option>
+              <option>Tepovanie sedačiek</option>
+              <option>Umývanie okien</option>
+              <option>Upratovanie kancelárie</option>
+              <option>Iné</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-date">Preferovaný termín</label>
+            <input id="f-date" name="termin" type="date">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-place">Adresa alebo mestská časť</label>
+          <input id="f-place" name="lokalita" autocomplete="street-address">
+        </div>
+        <div class="field">
+          <label for="f-msg">Správa</label>
+          <textarea id="f-msg" name="sprava" rows="5" required></textarea>
+        </div>
+        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label class="consent">
+          <input type="checkbox" name="suhlas" required>
+          <span>Súhlasím so spracovaním osobných údajov na účel vybavenia dopytu.</span>
+        </label>
+        <button type="submit" class="btn">Odoslať dopyt</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <img src="assets/logo-transparent.png" alt="bclean.solutions.sk" class="footer-logo">
+    <div>
+      <p><strong>Bclean Solutions</strong><br>IČO: 57 946 337<br>Bieloruská 5191/28, 821 06 Bratislava-Podunajské Biskupice</p>
+    </div>
+    <div>
+      <p><a href="mailto:bclean.solutions.sk@gmail.com">bclean.solutions.sk@gmail.com</a><br>© <span id="year">2026</span> Bclean Solutions</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
