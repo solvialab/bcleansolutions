@@ -226,6 +226,31 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* ---------- Mobilné menu ---------- */
+  const burger = document.querySelector('.burger');
+  const menu = document.getElementById('mobile-menu');
+  let menuTimer;
+
+  function setMenu(open) {
+    clearTimeout(menuTimer);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
+    body.classList.toggle('menu-open', open);
+    if (open) {
+      menu.hidden = false;
+      requestAnimationFrame(() => requestAnimationFrame(() => menu.classList.add('is-open')));
+    } else {
+      menu.classList.remove('is-open');
+      menuTimer = setTimeout(() => { menu.hidden = true; }, reduceMotion ? 0 : 500);
+    }
+  }
+  burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+  menu.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && body.classList.contains('menu-open')) { setMenu(false); burger.focus(); }
+  });
+  matchMedia('(min-width: 861px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
   /* ---------- Kalkulačka ---------- */
   const MIN_ORDER = 50;
   const RATES = { basic: 1.2, deep: 2.4, paint: 3.0, window: 7, office: 1.0 };
