@@ -211,6 +211,7 @@ body.is-revealed .hero-title .line:nth-child(3) > span { transition-delay: .18s;
 .section-pricing { background: linear-gradient(180deg, var(--ink) 0%, #1f1325 100%); }
 .calc { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(300px, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
 
+.calc-controls { min-width: 0; }
 .tabs {
   display: flex; gap: 4px;
   padding: 5px;
@@ -431,7 +432,7 @@ input[type="checkbox"]:checked::after { transform: rotate(-45deg) translate(1px,
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
-  .calc { grid-template-columns: 1fr; }
+  .calc { grid-template-columns: minmax(0, 1fr); }
   .receipt { position: relative; top: 0; }
   .steps { grid-template-columns: 1fr 1fr; gap: 48px 32px; }
 }
